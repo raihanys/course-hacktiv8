@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Styling Header */
+
+.header {
+  padding: 0 20px;
+  margin: 10px auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.menu {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
+.menu:hover {
+  color: blue;
+}
+
+/* Styling Profile */
+
+.card {
+  padding: 20px;
+  margin: 10px 25px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info {
+  display: inline-block;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.nama {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.info {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+  width: 135px;
+}
+
+.label i {
+  margin-right: 5px;
+}
+
+.info a {
+  color: blue;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+/* Styling Form */
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+#form {
+  padding: 20px;
+  margin: 10px 25px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+#form form {
+  display: flow-root;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+#form .form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form input[type="text"],
+#form input[type="email"] {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form input[type="submit"] {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form input[type="submit"]:hover {
+  background-color: darkblue;
+}

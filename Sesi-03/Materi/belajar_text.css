@@ -1,0 +1,12 @@
+.tulisan-kiri {
+  text-align: left;
+}
+.tulisan-kanan {
+  text-align: right;
+}
+.tulisan-tengah {
+  text-align: center;
+}
+.tulisan-justify {
+  text-align: justify;
+}
