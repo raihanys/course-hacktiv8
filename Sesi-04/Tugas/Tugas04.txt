@@ -1,0 +1,13 @@
+Judul: Algoritma Perhitungan Luas dan Keliling Lingkaran
+
+Input yang Diperlukan:
+Panjang jari-jari lingkaran (r)
+
+Langkah Perhitungan:
+Menerima input panjang jari-jari lingkaran (r).
+Hitung luas lingkaran dengan rumus: luas = π * r^2.
+Hitung keliling lingkaran dengan rumus: keliling = 2 * π * r.
+
+Instruksi untuk Menampilkan Hasil Perhitungan:
+Tampilkan hasil perhitungan luas lingkaran.
+Tampilkan hasil perhitungan keliling lingkaran.
