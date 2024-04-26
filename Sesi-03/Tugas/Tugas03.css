@@ -59,72 +59,87 @@ section {
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .profile-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
+  flex: 0 0 150px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 20px;
+  border: 1px solid orangered;
 }
 
 .profile-text {
-  text-align: center;
+  padding: 0 10px;
+  margin-left: 20px;
 }
 
 .profile-text h1 {
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .profile-text h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
 .action {
+  height: 30px;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.action button {
-  background-color: #4caf50;
-  color: white;
+.kontak {
+  background-color: blue;
+  color: #fff;
+  padding: 5px 10px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.kontak:hover {
+  background-color: darkblue;
+}
+
+.resume {
+  background-color: transparent;
+  color: green;
+  padding: 5px 10px;
+  border: 1px solid green;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.resume:hover {
+  background-color: green;
+  color: white;
 }
 
 #detail {
-  margin-top: 30px;
+  flex: 1;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 #detail table {
-  width: 100%;
   border-collapse: collapse;
 }
 
-#detail table th,
 #detail table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-#detail table th {
-  font-weight: bold;
-}
-
-#detail table a {
-  color: #4caf50;
-  text-decoration: none;
+  padding: 5px;
 }
