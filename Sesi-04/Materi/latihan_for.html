@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan For</title>
+  </head>
+  <body>
+    <h2>Angka Ganjil atau Genap</h2>
+
+    <ul id="numbersList"></ul>
+
+    <script>
+      function tampilkanAngka() {
+        var list = document.getElementById("numbersList");
+        for (var i = 1; i <= 10; i++) {
+          var listItem = document.createElement("li");
+
+          if (i % 2 === 0) {
+            listItem.textContent = "Even: " + i;
+          } else {
+            listItem.textContent = "Odd: " + i;
+          }
+          list.appendChild(listItem);
+        }
+      }
+      tampilkanAngka();
+    </script>
+  </body>
+</html>
