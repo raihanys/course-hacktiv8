@@ -1,0 +1,6 @@
+Algoritma kelulusan mahasiswa
+
+1.  Diberikan nama dan nilai mahasiswa, jika nilai tersebut lebih besar atau sama dengan 60
+    maka mahasiswa tersebut dinyatakan lulus, jika nilai lebih kecil dari  60 maka dinyatakan tidak lulus.
+2.  Baca nama dan nilai mahasiswa  Jika nilai >= 60 maka  Keterangan = lulus
+3.  Tetapi jika salah  Keterangan = tidak lulus  Tulis nama dan keterangan.
