@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tugas Mandiri 6</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      .yellow {
+        color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      for (let i = 1; i <= 3; i++) {
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent =
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quaerat recusandae qui ullam eaque cumque ea fugit, debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni maiores in?";
+        newParagraph.classList.add("paragraf" + i);
+        document.body.appendChild(newParagraph);
+      }
+    </script>
+
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+
+      let check = /Lorem/g;
+
+      paragraphs.forEach((paragraph) => {
+        if (check.test(paragraph.textContent)) {
+          animasi();
+        }
+      });
+
+      function animasi() {
+        function blink(paragraph, color) {
+          paragraph.classList.add(color);
+          setTimeout(() => {
+            paragraph.classList.remove(color);
+          }, 500);
+        }
+
+        const colors = ["red", "blue", "yellow"];
+
+        paragraphs.forEach((paragraph, index) => {
+          if (/Lorem/.test(paragraph.textContent)) {
+            setInterval(() => {
+              blink(paragraph, colors[index % 3]);
+            }, 2000);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
