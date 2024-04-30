@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Kondisi</title>
+  </head>
+
+  <body>
+    <h2>Belajar Kondisi</h2>
+    <div id="hasil">Raihan Yusuf</div>
+
+    <script>
+      let nama = "RAIHAN YUSUF";
+      let hasilDiv = document.getElementById("hasil");
+
+      if (nama.toUpperCase() === "RAIHAN yusuf") {
+        hasilDiv.innerHTML = "Benar 1";
+      }
+      if (nama.toUpperCase() == "RAIHAN YUSUF") {
+        hasilDiv.innerHTML += "<br>Benar 2";
+      }
+    </script>
+  </body>
+</html>

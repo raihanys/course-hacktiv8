@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klik Maju Mundur</title>
+  </head>
+  <body>
+    <h3>Belajar Maju Mundur</h3>
+
+    <button id="hitungMundur">Hitung Mundur</button>
+    <button id="hitungMaju">Hitung Maju</button>
+    <div id="hasil">10</div>
+
+    <script>
+      let hasil = document.getElementById("hasil");
+      let tombolMundur = document.getElementById("hitungMundur");
+      let tombolMaju = document.getElementById("hitungMaju");
+      let count = 10;
+
+      tombolMundur.addEventListener("click", function () {
+        count--;
+        updateHasil();
+      });
+
+      tombolMaju.addEventListener("click", function () {
+        count++;
+        updateHasil();
+      });
+
+      function updateHasil() {
+        hasil.textContent = count;
+      }
+    </script>
+  </body>
+</html>

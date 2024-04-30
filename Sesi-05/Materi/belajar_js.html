@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JS</title>
+  </head>
+  <body>
+    <h3>Belajar JS</h3>
+
+    <!-- contoh data java script (type data) -->
+    <div id="nama"></div>
+    <div id="lokasi"></div>
+    <div id="angka"></div>
+    <!-- contoh data java script (artimatika) -->
+    <div id="tambah"></div>
+    <div id="kurang"></div>
+    <div id="bagi"></div>
+    <div id="kali"></div>
+    <div id="mod"></div>
+
+    <!-- action button -->
+    <button onclick="panggilNamaSaya()">Panggil Nama Saya</button>
+    <div id="hasil"></div>
+
+    <script>
+      console.log("belajar js");
+
+      /*
+            tipe data
+            integer  = 1,2,10,100,dll
+            double/float = 1.2, 5.01
+            string = Aa!@#123 (all karakter)
+            char = 'A' > memory
+            boolean/byte = true/false > 0/1
+            datetime/timestamp = tanggal dan waktu
+            enum = "roda dua, roda empat" > roda satu
+            object = {
+                "nama": "arif",
+                "alamat":"indonesia"
+            }
+            array = [
+                1 = > [
+                    "nama": "arif",
+                    "alamat":"indonesia"
+                ],
+                2 = > [
+                    "nama": "arif",
+                    "alamat":"indonesia"
+                ]
+            ]
+
+            json > object/array
+            xml >
+        */
+
+      let nilai = 90;
+      let hasil = "tidak ada";
+      if (nilai > 0 && nilai <= 49) {
+        hasil = "E";
+      }
+      console.log("hasil nilai : " + hasil);
+
+      // let, const, var
+      let nama = "Raihan";
+      let lokasi = "Indonesia";
+
+      // pemanggilan nama dan lokasi (console)
+      console.log(nama);
+      console.log(lokasi);
+      // pemanggilan nama dan lokasi (inner html)
+      document.getElementById("nama").innerHTML = "contoh data : " + nama;
+      document.getElementById("lokasi").innerHTML = "contoh data : " + lokasi;
+
+      // angka
+      let angka = 10.2;
+      // string
+      let data = "A";
+      // boolean
+      let benar = true;
+      console.log(typeof angka); //
+      console.log(typeof data);
+      document.getElementById("angka").innerHTML =
+        "angka nya adalah : " + angka;
+
+      // array
+      let mobil = ["avanza", "brio", "crv"];
+      console.log("nama mobil : " + mobil);
+      console.log("nama mobil : " + mobil[0]);
+      console.log(typeof mobil);
+
+      //   object
+      let biodata = {
+        nama: "Raihan",
+        jenkel: "laki-laki",
+        id: "ID",
+      };
+      console.log("nama anda : " + biodata.nama);
+      console.log(typeof biodata);
+
+      console.log("====================");
+
+      let bilangan1 = 6;
+      let bilangan2 = 2;
+      //   tambah, kali, bagi, kurang, mod
+      let tambah = bilangan1 + bilangan2;
+      let kali = bilangan1 * bilangan2;
+      let bagi = bilangan1 / bilangan2;
+      let kurang = bilangan1 - bilangan2;
+      let mod = bilangan1 % bilangan2;
+      document.getElementById("tambah").innerHTML =
+        "<br>bilangan 1 : " +
+        bilangan1 +
+        "<br> bilangan 2 : " +
+        bilangan2 +
+        "<br> hasilnya adalah = " +
+        tambah;
+
+      // diluar function
+      console.log("bilangan 1 : " + bilangan1);
+      console.log("bilangan 2 : " + bilangan2);
+
+      //   panggil function return
+      console.log(panggilNama());
+
+      // dalam function
+      perhitungan(bilangan1, bilangan2);
+
+      function perhitungan(bilangan1, bilangan2) {
+        console.log("bilangan 1 : " + bilangan1);
+        console.log("bilangan 2 : " + bilangan2);
+        console.log("nama saya : " + panggilNama());
+      }
+
+      function panggilNama() {
+        return "Raihan Yusuf Sa'ari";
+      }
+
+      function panggilNamaSaya() {
+        document.getElementById("hasil").innerHTML = panggilNama();
+        console.log(panggilNama());
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Huruf Mutu</title>
+  </head>
+  <body>
+    <h3>Belajar Huruf Mutu</h3>
+    <div>Nilai Anda : <span id="nilai">80</span></div>
+    <div>Huruf Mutu : <span id="hasil"></span></div>
+    <script>
+      let nilai = parseInt(document.getElementById("nilai").innerText);
+      let hasil = "";
+
+      if (nilai >= 80 && nilai <= 100) {
+        hasil = "A";
+      } else if (nilai >= 70 && nilai <= 79) {
+        hasil = "B";
+      } else if (nilai >= 60 && nilai <= 69) {
+        hasil = "C";
+      } else if (nilai >= 50 && nilai <= 59) {
+        hasil = "D";
+      } else {
+        hasil = "E";
+      }
+
+      document.getElementById("hasil").innerText = hasil;
+    </script>
+  </body>
+</html>

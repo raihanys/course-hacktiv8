@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Sesi 5</title>
+    <link rel="stylesheet" href="Tugas05.css" />
+  </head>
+  <body>
+    <label for="inputText">Pesan:</label>
+    <input type="text" id="inputText" placeholder="Masukan Teks" />
+    <label for="inputNumber">Berapa Kali Cetak:</label>
+    <input type="number" id="inputNumber" placeholder="Masukan Angka" />
+    <button onclick="cetak()">Cetak</button>
+    <ol id="outputList"></ol>
+
+    <script>
+      function cetak() {
+        var text = document.getElementById("inputText").value;
+        var number = document.getElementById("inputNumber").value;
+        var outputList = document.getElementById("outputList");
+        outputList.innerHTML = "";
+        for (var i = 1; i <= number; i++) {
+          var listItem = document.createElement("li");
+          listItem.textContent = text;
+          outputList.appendChild(listItem);
+        }
+      }
+    </script>
+  </body>
+</html>
