@@ -9,17 +9,28 @@
     <h1>Index of /</h1>
     <ul id="directory-listing"></ul>
     <script>
-      fetch(".")
-        .then((response) => response.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const items = [...doc.querySelectorAll("a")];
+      fetch(
+        "https://api.github.com/repos/raihanys/raihanys.github.io/Hacktiv8-x-Prakerja/"
+      )
+        .then((response) => response.json())
+        .then((data) => {
           const list = document.getElementById("directory-listing");
-          items.forEach((item) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="${item.href}">${item.text}</a>`;
-            list.appendChild(li);
+          data.forEach((item) => {
+            if (item.type === "dir") {
+              const li = document.createElement("li");
+              const link = document.createElement("a");
+              link.href = item.html_url;
+              link.textContent = item.name + "/";
+              li.appendChild(link);
+              list.appendChild(li);
+            } else if (item.type === "file") {
+              const li = document.createElement("li");
+              const link = document.createElement("a");
+              link.href = item.html_url;
+              link.textContent = item.name;
+              li.appendChild(link);
+              list.appendChild(li);
+            }
           });
         });
     </script>
