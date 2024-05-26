@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul id="menu" class="hidden">
+        <li><a href="/">HOME</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">INVENTORY</a></li>
+      </ul>
+      <div class="menu-mobile">
+        <a href="#" onclick="showMenu()">menu</a>
+      </div>
+    </nav>
+
+    <section id="box-profile">
+      <div class="profile-details">
+        <div class="img-profile">
+          <div
+            class="photo"
+            style="background-image: url(asset/image/profil.jpg)"
+          ></div>
+        </div>
+        <div class="details">
+          <div class="description">
+            <h1 id="pName">Raihan Yusuf Sa'ari</h1>
+            <p id="pRole">Software Engineer</p>
+            <div class="buttons">
+              <a href="#input-form" class="button bg-blue" onclick="editForm()"
+                >Edit</a
+              >
+              <a href="#" class="button border-green">Resume</a>
+            </div>
+          </div>
+          <div class="information">
+            <div class="data">
+              <p class="field">Gender</p>
+              <p id="pGender" class="text-gray">Male</p>
+            </div>
+            <div class="data">
+              <p class="field">Address</p>
+              <p id="pAddress" class="text-gray">JL RS SOEKANTO NO.58</p>
+            </div>
+            <div class="data">
+              <p class="field">Birth Date</p>
+              <p id="pDate" class="text-gray">18/04/2001</p>
+            </div>
+            <div class="data">
+              <p class="field">Job</p>
+              <p id="pJob" class="text-gray">Freelancer</p>
+            </div>
+            <div class="data">
+              <p class="field">Hobby</p>
+              <p id="pHobby" class="text-gray">Basketball</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="input-form">
+      <form method="#" action="#">
+        <div class="form">
+          <label>Nama</label>
+          <input
+            id="inpName"
+            type="text"
+            name="nama"
+            placeholder="Masukkan nama anda"
+          />
+        </div>
+        <div class="form">
+          <label>Role</label>
+          <input id="inpRole" type="text" name="role" />
+        </div>
+        <div class="form">
+          <label>Gender</label>
+          <input id="inpGender" type="text" name="gender" />
+        </div>
+        <div class="form">
+          <label>Alamat</label>
+          <input id="inpAddress" type="text" name="address" />
+        </div>
+        <div class="form">
+          <label>Birth Date</label>
+          <input id="inpDate" type="date" name="date" />
+        </div>
+        <div class="form">
+          <label>Job</label>
+          <input id="inpJob" type="text" name="job" />
+        </div>
+        <div class="form">
+          <label>Hobby</label>
+          <input id="inpHobby" type="email" name="hobby" />
+        </div>
+        <div class="form">
+          <input
+            onclick="simpanForm()"
+            type="submit"
+            name="submit"
+            value="SUBMIT"
+            class="bg-green"
+          />
+        </div>
+      </form>
+    </section>
+
+    <script src="asset/js/script.js"></script>
+  </body>
+</html>

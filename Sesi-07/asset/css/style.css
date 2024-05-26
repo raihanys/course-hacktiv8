@@ -1,0 +1,288 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f9fc;
+}
+
+/* Button Colors */
+.bg-blue {
+  background-color: blue;
+  color: #fff;
+  box-shadow: 0 0 7px 0px blue;
+  border: 1px solid blue;
+}
+
+.bg-green {
+  background-color: green;
+  color: white;
+  box-shadow: 0 0 7px 0px green;
+  border: 1px solid green;
+}
+
+.border-green {
+  color: green;
+  border: 1px solid green;
+}
+
+/* Component */
+.text-black {
+  color: black;
+}
+
+.text-gray {
+  color: #888888;
+}
+
+.button {
+  padding: 10px 20px; /* Mengurangi padding agar tombol lebih kompak */
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+/* Navbar */
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: -1px -7px 20px 0px #888888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+}
+
+nav .menu-mobile {
+  display: none;
+  height: 60px;
+}
+
+nav .hidden {
+  display: flex;
+}
+
+.menu-mobile {
+  display: none;
+  align-content: center;
+}
+
+.menu-mobile a {
+  color: #888;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #888;
+}
+
+/* Profile Section */
+.buttons {
+  margin-top: 10px; /* Mengurangi margin atas agar tombol berdekatan dengan deskripsi */
+}
+
+/* Profile Section */
+section#box-profile {
+  position: relative;
+  width: 80%;
+  margin: 60px auto;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 0px rgba(136, 136, 136, 0.2);
+  padding: 20px;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.img-profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-profile .photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.details {
+  flex: 1;
+  margin-left: 20px;
+  display: flex; /* Menjadikan description dan information berdampingan */
+}
+
+.description,
+.information {
+  flex: 1; /* Membuat description dan information mengisi ruang yang sama */
+}
+
+.description {
+  padding: 20px;
+}
+
+.description h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.information {
+  margin-top: 20px;
+}
+
+.data {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.data p {
+  margin: 0;
+}
+
+.field {
+  width: 150px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Input Form */
+section#input-form {
+  position: relative;
+  width: 80%;
+  margin: 60px auto;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 0px rgba(136, 136, 136, 0.2);
+  padding: 20px;
+}
+
+section#input-form .form {
+  margin-bottom: 20px;
+}
+
+section#input-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+section#input-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+section#input-form input:focus {
+  outline: none;
+  box-shadow: 0 0 3px 0px #333;
+}
+
+section#input-form .button {
+  display: block;
+  margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: none;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul.hidden {
+    display: flex;
+    width: 90%;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  nav ul li:first-child {
+    border-top: none;
+  }
+
+  nav ul li a {
+    padding: 10px;
+  }
+
+  nav .menu-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section#box-profile {
+    width: 90%;
+  }
+
+  .profile-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .img-profile {
+    height: 150px;
+    width: 150px;
+  }
+}
