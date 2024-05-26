@@ -4,13 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hacktiv8 x Prakerja</title>
-    <script>
-      window.location.href = "/Hacktive-x-Prakerja/sesi.html";
-    </script>
   </head>
   <body>
-    <body>
-      <p><a href="/Hacktive-x-Prakerja/sesi.html">click here</a>.</p>
-    </body>
+    <div id="file-list"></div>
+
+    <script>
+      const owner = "raihanys";
+      const repo = "raihanys.github.io";
+      const path = "Hacktiv8-x-Prakerja";
+
+      async function fetchDirectoryContents() {
+        const response = await fetch(
+          `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
+        );
+        const data = await response.json();
+
+        const fileList = document.getElementById("file-list");
+        data.forEach((item) => {
+          const listItem = document.createElement("div");
+          listItem.textContent = item.name;
+          fileList.appendChild(listItem);
+        });
+      }
+
+      fetchDirectoryContents();
+    </script>
   </body>
 </html>
