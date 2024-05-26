@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hacktiv8 x Prakerja</title>
-    <script>
-      window.location.href = "https://raihanys.github.io/Hacktive-x-Prakerja/";
-    </script>
   </head>
   <body>
-    <p>
-      <a href="https://raihanys.github.io/Hacktive-x-Prakerja/">click here</a>.
-    </p>
+    <h1>Index of /</h1>
+    <ul id="directory-listing"></ul>
+    <script>
+      fetch(".")
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const items = [...doc.querySelectorAll("a")];
+          const list = document.getElementById("directory-listing");
+          items.forEach((item) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${item.href}">${item.text}</a>`;
+            list.appendChild(li);
+          });
+        });
+    </script>
   </body>
 </html>
