@@ -1,6 +1,6 @@
 # Course Hacktiv8 x Prakerja
 
-Selamat datang di repository Course Hacktiv8 x Prakerja! Berikut adalah jadwal dan topik yang dibahas selama pelatihan:
+Selamat datang di repository Course Hacktiv8 x Prakerja! Berikut adalah topik yang dibahas selama pelatihan:
 
 ## Sesi 1 - Perkenalan
 - Pekerjaan Software Developer
