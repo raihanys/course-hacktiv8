@@ -22,7 +22,15 @@
         const fileList = document.getElementById("file-list");
         data.forEach((item) => {
           const listItem = document.createElement("div");
-          listItem.textContent = item.name;
+          const link = document.createElement("a");
+          link.textContent = item.name;
+          link.href = item.html_url;
+
+          if (item.type === "dir") {
+            link.href += "/";
+          }
+
+          listItem.appendChild(link);
           fileList.appendChild(listItem);
         });
       }
